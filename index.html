@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Note App</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container my-5">
+    <div class="text-center mb-4">
+      <h1>Notes</h1>
+      <button class="btn btn-primary" id="createNoteBtn">Create New Note</button>
+      
+      <div class="btn-group ml-2">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Menu
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#" id="showActiveNotes">Active Notes</a>
+          <a class="dropdown-item" href="#" id="showArchivedNotes">Archived Notes</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" id="notesContainer">
+    </div>
+
+    <div class="modal fade" id="noteModal" tabindex="-1" role="dialog" aria-labelledby="noteModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="noteModalLabel">New Note</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="noteForm">
+              <div class="form-group">
+                <input type="text" class="form-control" id="noteTitle" placeholder="Title" required>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" id="noteBody" rows="5" placeholder="Write your note here..." required></textarea>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="noteLabels" placeholder="Add labels (comma-separated)">
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="pinNote">
+                <label class="form-check-label" for="pinNote">Pin this note</label>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="saveNoteBtn">Save Note</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
