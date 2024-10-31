@@ -2,7 +2,7 @@
 
 A simple note-taking web application that allows users to create, archive, delete, and organize notes locally in their browser, using localStorage. Built with HTML, CSS, JavaScript, and Bootstrap.
 
-![Screenshot of Notes App](screenshot.png)
+![Screenshot of Notes App](screenshot.PNG)
 
 ## Features
 
